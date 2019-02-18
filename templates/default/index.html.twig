@@ -7,7 +7,8 @@
     {# ------ attempt to read 'colors' from session ----- #}
     {% set colors = app.session.get('colors') %}
 
-    {# ------ if 'null' then no found in session ----- #}
+    {# ------ if 'null' then not found in session ----- #}
+    {# ------ so set to black/white default values ----- #}
     {% if colors is null %}
         {# ------ set our default colours array ----- #}
         {% set colors = {
